@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sincronizando;
 
-/**
- *
- * @author Santi
- */
+import Cosas.CajeroAutomatico;
+
 public class Sincronizando {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        CajeroAutomatico cajero = new CajeroAutomatico();
+        Thread pepito = new Thread(cajero,"Pepito");
+        Thread juanito = new Thread(cajero,"Juanito");
+        pepito.start();
+        juanito.start();
     }
     
 }
