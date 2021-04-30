@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Cosas;
 
-/**
- *
- * @author Santi
- */
 public class CuentaBancaria {
-    
+    private int saldoActual = 100;
+    public int getSaldoActual(){
+        return saldoActual;
+    }
+    public void retirarSaldo(int num){
+        saldoActual -= num;
+    }
 }
